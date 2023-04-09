@@ -27,7 +27,11 @@ int findDuplicate(std::vector<int>& nums) {
     // vector contains duplicated numbers
     int duplicatedNums;
 
-    // store all elements in nums vector to unordered map, increment the frequency (as the value).
+    // store all elements in nums vector to unordered map
+    /**
+     * nums[i] as the key
+     * the frequency value set by increment operator (++)
+    */
     for (int i = 0; i < nums.size(); i++) numAndFrequency[nums[i]]++;
     
     // store duplicated numbers to a variable
