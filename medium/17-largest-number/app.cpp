@@ -4,6 +4,22 @@
 #include <algorithm>
 
 /**
+ * Given a list of non-negative integers nums, arrange them such that they form the largest number and return it.
+
+    Since the result may be very large, so you need to return a string instead of an integer.
+
+    Example 1:
+
+    Input: nums = [10,2]
+    Output: "210"
+    
+    Example 2:
+
+    Input: nums = [3,30,34,5,9]
+    Output: "9534330"
+*/
+
+/**
  * The custom comparison function takes two arguments of the same type as the elements being sorted,
  * and returns true if the first argument should come before the second argument in the sorted sequence,
  * or false otherwise. The std::sort() function will use this function to compare elements and sort them accordingly.
