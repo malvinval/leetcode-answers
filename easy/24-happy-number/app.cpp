@@ -45,11 +45,11 @@ int squareAndSum(int n) {
 }
 
 bool isHappy(int n) {
-    std::vector<int> nn;
+    std::vector<int> seenNumber;
 
-    // std::find(nn.begin(), nn.end(), n) == nn.end() is used to find if value of n already pushed in vector before.
-    while ( n != 1 && std::find(nn.begin(), nn.end(), n) == nn.end() ) {
-        nn.push_back(n);
+    // std::find(seenNumber.begin(), seenNumber.end(), n) == seenNumber.end() is used to find if value of n already pushed in vector before.
+    while ( n != 1 && std::find(seenNumber.begin(), seenNumber.end(), n) == seenNumber.end() ) {
+        seenNumber.push_back(n);
         n = squareAndSum(n);
     }
 
@@ -75,7 +75,7 @@ bool isHappy(int n) {
 /**
  * Why we need vector ?
  * 
- * If we've seen a number before in the nn vector, it means that we have entered a cycle of non-happy numbers,
+ * If we've seen a number before in the 'seenNumber' vector, it means that we have entered a cycle of non-happy numbers,
  * and we should stop the calculation and return false.
  * 
  * This is because once we enter a cycle of non-happy numbers,
