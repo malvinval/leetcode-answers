@@ -9,7 +9,7 @@
 
     Input: n = 27
     Output: true
-    Explanation: 27 = 33
+    Explanation: 27 = 3^3
     
     Example 2:
 
