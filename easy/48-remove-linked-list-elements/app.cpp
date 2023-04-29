@@ -15,14 +15,19 @@ struct ListNode {
 
 // just submit this function to leetcode
 ListNode* removeElements(ListNode* head, int val) {
-    // check if head is not null and it's value.
+    // delete head's value if it is not null and matched with val param
     while (head != nullptr && head->val == val) {
         ListNode* temp = head;
         head = head->next;
         delete temp;
     }
 
-    // check if head is null
+    /**
+     * check if head is null (after previous head deletion)
+     * 
+     * imagine if the list is [1,1,1,1,1] and val is 1.
+     * the head now must be null, and program must be terminated.
+    */
     if (head == nullptr) {
         return nullptr;
     }
