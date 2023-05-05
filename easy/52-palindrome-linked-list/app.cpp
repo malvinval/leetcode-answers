@@ -1,6 +1,14 @@
 #include <iostream>
 #include <algorithm>
 
+/**
+ * Given the head of a singly linked list.
+ * Return true if it is a palindrome or false otherwise.
+ * 
+ * Input: head = [1,2,2,1]
+ * Output: true
+*/
+
 struct ListNode {
     int val;
     ListNode *next;
