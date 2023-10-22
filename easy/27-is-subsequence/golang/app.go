@@ -19,6 +19,14 @@ import "fmt"
 */
 
 func isSubsequence(s string, t string) bool {
+
+	/**
+	 * In this case, i is used to track s, j is used to track t.
+	 *
+	 * If a character in t matches current character in s, increment both tracker (i and j).
+	 * If not, only increment j (tracker of t)
+	 */
+
 	j := 0
 	i := 0
 
